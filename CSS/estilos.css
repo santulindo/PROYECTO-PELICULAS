@@ -1,29 +1,9 @@
-/* Fondo general */
-body {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  background: linear-gradient(135deg, #ece9e6, #ffffff);
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Inputs y botones */
-input, button {
-  transition: all 0.2s ease-in-out;
-}
-
-input:focus {
-  outline: none;
-  border-color: #3b82f6; /* azul Tailwind */
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
-}
-
-button:hover {
-  transform: translateY(-1px);
-}
-
-/* Cards de película */
-#listaPeliculas > div {
-  transition: transform 0.2s ease-in-out;
-}
-
-#listaPeliculas > div:hover {
-  transform: scale(1.02);
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
 }
